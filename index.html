@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet"  href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Текущие задачи</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Выполненные задачи</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Удалённые задачи</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+  <table class="table table-sm ">
+  <thead class="tableTask">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Название задания</th>
+      <th scope="col">Описание задания</th>
+      <th scope="col">Приоритет</th>
+      <th scope="col">Редактировать</th>
+      <th scope="col">Выполнено</th>
+      <th scope="col">Удалить</th>
+    </tr>
+  </thead>
+  <tbody class="table_add tableTask"></tbody>
+</table>
+<div class="form">
+  
+    <!-- В стилях display.none, удалите, чтобы увидеть--> 
+    <div class="popap">
+        <div class="popap-head">
+          <button class="closed">X</button>
+            
+        </div>
+        <div class="popap-main">
+          <form class="popap-form">     
+            <label for="taskName" id="labelTaskName"> Название нового задания </label>
+               <input type="text" class="field" placeholder="Название задания" name="taskName" id="taskName" > 
+
+            <label for="discription" >Описание задания</label>
+               <textarea type="text" class="field" placeholder="Описание задания" name="description" id="discription" ></textarea> 
+             <label for="priority">Выберите приоритет</label>
+                <select name="priority" class="field" id="priority">
+                   <option disabled >Приоритет</option>
+                   <option value="trial">trial</option>
+                   <option value="no-priority" selected> No-priority</option>
+                   <option value="high-priority"> high-priority</option>
+                 </select>          
+          </form>
+            <div class="popap-btn">
+                <button class="btn_form closed">close</button>
+                <button class="btn_form ok add" >ok</button>
+              </div>
+        </div>
+    </div>
+</div>
+<button class="btn_form add-user add_btn">Добавить задачу</button>
+
+<!--<div class="d-flex justify-content-center"> 
+  <button type="button" class="btn btn-primary" id="newTask" data-toggle="modal" data-target="#exampleModal"> 
+    Добавить новую задачу 
+  </button> 
+</div>
+
+<!-- Modal 
+<div class="modal fide" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Новая задача</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="newTask">
+          
+            <label for="taskName"> Название нового задания </label>
+          <input type="text" class="field" placeholder="Название задания" name="taskName" id="taskName" required> <br>
+          <label for="discription" >Описание задания</label>
+          <textarea type="text" class="field" placeholder="Описание задания" name="description" id="discription" ></textarea><br>
+          <label for="priority">Выберите приоритет</label>
+          <select name="priority" class="field" id="priority">
+            <option disabled >Приоритет</option>
+            <option value="trial">trial</option>
+            <option value="no-priority" selected> No-priority</option>
+            <option value="high-priority"> high-priority</option>
+          </select> 
+          
+          
+        </div>
+          
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button button type="button" class="btn btn-primary add">Добавить</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <table class="table table-sm done">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Название задания</th>
+      <th scope="col">Описание задания</th>
+      <th scope="col">Приоритет</th>
+      <th scope="col">Удалить</th>
+    </tr>
+  </thead>
+  <tbody class="table_done"></tbody>
+</table>
+  </div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+    <table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Название задания</th>
+      <th scope="col">Описание задания</th>
+      <th scope="col">Приоритет</th>
+      <th scope="col">Восстановить</th>
+    </tr>
+  </thead>
+  <tbody class="table_return">
+  </tbody>
+</table>
+
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script src="script.js"> </script>
+</body>
+</html>

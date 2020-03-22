@@ -1,0 +1,113 @@
+﻿.newTask
+{
+    width: 350px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 250px;
+}
+
+* {
+    font-family: sans-serif;
+}
+
+.form {
+    display: none;
+    position: fixed;
+    width: 100%;
+ 
+    background: rgba(0, 0, 0, .3);
+    cursor: pointer;
+    position: absolute;
+}
+
+.popap {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, .5);
+    width: 320px;
+    height: 340px;
+    background: #fff;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: default;
+    border-radius: 3px;
+}
+
+.popap-head {
+    position: relative;
+    height: 25px;
+}
+
+.popap-head .closed {
+    position: absolute;
+    height: 20px;
+    padding: 0 2px;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.popap-head .closed:hover {
+    border-color: #333;
+}
+
+.popap-main {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popap-form {
+    margin-bottom: 20px;
+}
+
+.popap-main label {
+    display: block;
+    margin-bottom: 0px;
+}
+
+.popap-main label span {
+    font: 12px sans-serif;
+    display: block;
+}
+
+.popap-main label input {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.popap-btn {
+    text-align: right;
+}
+
+.btn_form {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn_form:hover {
+    border-color: #333;
+    color: #ccc;
+    background: black;
+}
+.field {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.add_btn {
+	margin-left: 45%;
+}
+button:active, button:focus {
+  outline: none !important;
+}
+
